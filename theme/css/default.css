@@ -1219,7 +1219,7 @@ article.smaller q:before, article.smaller q:after {
 .logoslide img {
   width: 80%;
   height: auto;
-  margin: 10%;
+  margin-left: 10%;
 }
 
 /* line 845, ../scss/default.scss */

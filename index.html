@@ -5,6 +5,8 @@ Authors: Eric Bidelman <ebidel@gmail.com>
          Luke Mahé <lukem@google.com>
 
 URL: https://code.google.com/p/io-2012-slides
+
+Modified BY Florian Rotagnon for Michelin
 -->
 <!DOCTYPE html>
 <html>
@@ -28,12 +30,12 @@ URL: https://code.google.com/p/io-2012-slides
 
   <slide class="logoslide nobackground">
     <article>
-      <span><img src="images/front_page.png"></span>
+      <span><img src="images/front_page.png" style="top=0px;"></span>
     </article>
   </slide>
 
   <slide class="title-slide segue nobackground">
-    <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
+    <aside class="gdbar"><img src="images/bib_rouge.png"></aside>
     <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
     <hgroup class="auto-fadein">
       <h1 data-config-title><!-- populated from slide_config.json --></h1>
@@ -41,340 +43,320 @@ URL: https://code.google.com/p/io-2012-slides
       <p data-config-presenter><!-- populated from slide_config.json --></p>
     </hgroup>
   </slide>
-
+  
   <slide>
     <hgroup>
-      <h2>Slide with Bullets</h2>
+      <h2>Plan</h2>
     </hgroup>
     <article>
-      <ul>
-        <li>Titles are formatted as Open Sans with bold applied and font size is set at 45</li>
-        <li>Title capitalization is title case
+      <ul class="build">
+        <li>Introduction
           <ul>
-            <li>Subtitle capitalization is title case</li>
+            <li>Présentation du projet</li>
+            <li>Michelin</li>
           </ul>
         </li>
-        <li>Subtitle capitalization is title case</li>
-        <li>Titles and subtitles should never have a period at the end</li>
+        <li>Application Performance Management
+			<ul>
+				<li>Théorie</li>
+				<li>Outils Michelin</li>
+				<li>RPM Dashboards : Cycle de vie</li>
+			</ul>
+		</li>
+        <li>Conclusion</li>
       </ul>
     </article>
   </slide>
-
+  
+  <!-- PLAN avec highlight INTRODUCTION-->
   <slide>
     <hgroup>
-      <h2>Slide with Bullets that Build</h2>
-      <h3>Subtitle Placeholder</h3>
+      <h2>Plan</h2>
     </hgroup>
     <article>
-      <p>A list where items build:</p>
-      <ul class="build">
-        <li>Pressing 'h' highlights code snippets</li>
-        <li>Pressing 'p' toggles speaker notes (if they're on the current slide)</li>
-        <li>Pressing 'f' toggles fullscreen viewing</li>
-        <li>Pressing 'w' toggles widescreen</li>
-        <li>Pressing 'o' toggles overview mode</li>
-        <li>Pressing 'ESC' toggles off these goodies</li>
-      </ul>
-      <p>Another list, but items fade as they build:</p>
-      <ul class="build fade">
-        <li>Hover over me!</li>
-        <li>Hover over me!</li>
-        <li>Hover over me!</li>
-      </ul>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Slide with (Smaller Font)</h2>
-    </hgroup>
-    <article class="smaller">
       <ul>
-        <li>All <a href="http://google.com">links</a> open in new tabs.</li>
-        <li>To change that this, add <code>target="_self"</code> to the link.</li>
+        <li>Introduction
+          <ul>
+            <li>Présentation du projet</li>
+            <li>Michelin</li>
+          </ul>
+        </li>
+        <li style="opacity:0.3;-moz-transition:opacity 0.5s;">Application Performance Management
+			<ul>
+				<li>Théorie</li>
+				<li>Outils Michelin</li>
+				<li>RPM Dashboards : Cycle de vie</li>
+			</ul>
+		</li>
+        <li style="opacity:0.3;-moz-transition:opacity 0.5s;">Conclusion</li>
+      </ul>
+    </article>
+  </slide>
+  
+  <slide>
+	<hgroup>
+      <h2>Introduction - Présentation du projet</h2>
+    </hgroup>
+	<article style="padding-top: 10%;">
+		Sujet : <i style="font-style:italic;">Pousser l'utilisation d'un outil d'analyse de performance, au sein de l'équipe infrastructure/groupe.</i><br/><br/><br/><br/>
+		<ul>
+			<li>Existant : un outil non utilisé dans une suite logicielle/matérielle.</li>
+			<li>Mon rôle : analyser, comparer besoins, tirer des conclusions, développer l'utilisation.</li>
+		</ul>
+	</article>
+	<p style="text-align:center;"><img src="images/Bibendum_starting_blocks.jpg" class="reflect" alt="Description" title="Description" style="width:20%;"></p>
+  </slide>
+  
+  <!-- Architecture distribuée -->
+  <slide>
+	<hgroup>
+      <h2>Introduction - Michelin</h2>
+    </hgroup>
+	<article>
+		<h3>Contexte</h3>
+		<ul>
+            <li>Infrastructure externalisé</li>
+			<p style="text-align:center;"><img src="images/IBM_Michelin.png" class="reflect" alt="Description" title="Description" style="width:80%;"></p>
+          </ul>
+	</article>
+  </slide>
+  
+  <!-- Organisation matricielle forte -->
+  <slide>
+	<hgroup>
+      <h2>Introduction - Michelin</h2>
+    </hgroup>
+	<article>
+		<h3>Contexte</h3>
+		<ul>
+            <li>Découpage fort</li>
+			<p style="text-align:center;"><img src="images/organisation_michelin.jpg" class="reflect" alt="Description" title="Description" style="width:80%;"></p>
+          </ul>
+	</article>
+  </slide>
+  
+  <!-- PLAN avec highlight APM-->
+  <slide>
+    <hgroup>
+      <h2>Plan</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li style="opacity:0.3;-moz-transition:opacity 0.5s;">Introduction
+          <ul>
+            <li>Présentation du projet</li>
+            <li>Michelin</li>
+          </ul>
+        </li>
+        <li>Application Performance Management
+			<ul>
+				<li>Théorie</li>
+				<li>Outils Michelin</li>
+				<li>RPM Dashboards : Cycle de vie</li>
+			</ul>
+		</li>
+        <li style="opacity:0.3;-moz-transition:opacity 0.5s;">Conclusion</li>
+      </ul>
+    </article>
+  </slide>
+  
+  <!-- Théorie : objectifs -->
+  <slide>
+	<hgroup>
+      <h2>APM - Théorie</h2>
+    </hgroup>
+	<article>
+		<ul>
+            <li>Définition</li><br/><br/><br/>
+			<li>Objectifs</li>
+			<ul>
+				<li>Améliorer l'efficience de l'équipe IT.</li>
+				<li>Régler les problèmes de performance de manière pro-active.</li>
+				<li>Diagnostiquer rapidement la cause d'un problème.</li>
+			</ul>
+          </ul>
+	</article>
+  </slide>
+  
+  <!-- 2 types : actif / passif -->
+  <slide>
+	<hgroup>
+      <h2>APM - Théorie</h2>
+    </hgroup>
+	<p style="text-align:center;"><img src="images/apm_activ_passiv.jpg" class="reflect" alt="Description" title="Description" style="width:70%;"></p>
+  </slide>
+  
+  <!-- APM && cycle de vie -->
+  <slide>
+	<hgroup>
+      <h2>APM - Cycle de vie</h2>
+    </hgroup>
+	<article>
+		<ul>
+			<p style="text-align:center;"><img src="images/cycle_vie.jpg" class="reflect" alt="Description" title="Description" style="width:70%;"></p>
+			<li>4 types de processus :
+			<ul>
+				<li>Qualification</li>
+				<li>Simulation</li>
+				<li>Troubleshooting</li>
+				<li>Monitoring</li>
+			</ul>
+			</li>
+		</ul>
+	</article>
+  </slide>
+  
+  <slide>
+	<hgroup>
+      <h2>APM - Outils Michelin</h2>
+    </hgroup>
+	<article>
+		Outils actuels:
+		<p style="text-align:center;"><img src="images/ip-label.png" class="reflect" alt="Description" title="Description" style="width:30%;padding-right:10%;"><img src="images/UXM.png" class="reflect" alt="Description" title="Description" style="width:30%;"></p>
+		Outils en test:
+		<p style="text-align:center;"><img src="images/nagios_logo.png" class="reflect" alt="Description" title="Description" style="width:30%;padding-right:10%;"><img src="images/Logstash_logo.png" class="reflect" alt="Description" title="Description" style="width:30%;padding-right:10%;"><img src="images/robotframework.png" class="reflect" alt="Description" title="Description" style="width:30%;"></p>
+	</article>
+  </slide>
+  
+  <slide>
+	<hgroup>
+      <h2>APM - Outils Michelin</h2>
+    </hgroup>
+	<article>
+		RIVERBED
+		<p style="text-align:center;"><img src="images/OPNET_Logo.gif" class="reflect" alt="Description" title="Description" style="width:30%;padding-right:10%;"><img src="images/fleche-droite.png" class="reflect" alt="Description" title="Description" style="width:10%;padding-right:10%;"><img src="images/riverbed-logo.jpg" class="reflect" alt="Description" title="Description" style="width:30%;"></p>
+		Architecture
+		<p style="text-align:center;"><img src="images/apm_passiv.jpg" class="reflect" alt="Description" title="Description" style="width:80%;"></p>
+	</article>
+  </slide>
+  
+  <slide>
+	<hgroup>
+      <h2>APM - Outils Michelin</h2>
+    </hgroup>
+	<article>
+		Chez Michelin :
+		<p style="text-align:center;"><img src="images/riverbed_michelin.png" class="reflect" alt="Description" title="Description" style="width:80%;"></p>
+	</article>
+  </slide>
+  
+  <slide>
+	<hgroup>
+      <h2>APM - Outils Michelin</h2>
+    </hgroup>
+	<article>
+		ARX :
+		<p style="text-align:center;"><img src="images/troubleshooting.png" class="reflect" alt="Description" title="Description" style="width:20%;"></p>
+		<p style="text-align:center;"><img src="images/ARX.png" class="reflect" alt="Description" title="Description" style="width:80%;"></p>
+	</article>
+  </slide>
+  
+  <slide>
+	<hgroup>
+      <h2>APM - Outils Michelin</h2>
+    </hgroup>
+	<article>
+		RPM Dashboards :
+		<p style="text-align:center;"><img src="images/monitoring.png" class="reflect" alt="Description" title="Description" style="width:20%;"></p>
+		<p style="text-align:center;"><img src="images/DSHB.png" class="reflect" alt="Description" title="Description" style="width:80%;"></p>
+	</article>
+  </slide>
+  
+  <slide>
+	<hgroup>
+      <h2>RPM Dashboards : Cycle de vie 1/2</h2>
+    </hgroup>
+	<article>
+          <ul style="padding-top:5%;">
+            <li>Découverte de l'outil</li>
+            <li>Echange et communication interne POC</li>
+            <li>Stabilisation</li>
+            <li>Création droit</li>
+            <li>Création procédures</li>
+            <li>Analyse problèmes</li>
+            <li>Corrections</li>
+			<ul>
+				<li>Mise à jours de la plateforme</li>
+				<li>Insertion LDAP</li>
+			</ul>
+          </ul>
+	</article>
+  </slide>
+  
+  <slide>
+	<hgroup>
+      <h2>RPM Dashboards : Cycle de vie 2/2</h2>
+    </hgroup>
+	<article>
+          <ul style="padding-top:10%;">
+			<li>Communication globale</li>
+			<ul style="padding-top:3%;">
+				<li>Information</li>
+				<li>Formation IBM/ISIMA</li>
+			</ul>
+          </ul>
+	</article>
+  </slide>
+  
+  <slide>
+	<hgroup>
+      <h2>Et après ? </h2>
+    </hgroup>
+	<article>
+          <ul>
+			<li>Dashboards suite...</li>
+			<li>NAGIOS</li>
+			<li>Cloud Computing</li>
+			<p style="text-align:center;"><img src="images/cloud.png" class="reflect" alt="Description" title="Description" style="width:50%;"></p>
+          </ul>
+	</article>
+  </slide>
+  
+   <!-- PLAN avec highlight CONCLUSION-->
+  <slide>
+    <hgroup>
+      <h2>Plan</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li style="opacity:0.3;-moz-transition:opacity 0.5s;">Introduction
+          <ul>
+            <li>Présentation du projet</li>
+            <li>Michelin</li>
+          </ul>
+        </li>
+        <li style="opacity:0.3;-moz-transition:opacity 0.5s;">Application Performance Management
+			<ul>
+				<li>Théorie</li>
+				<li>Outils Michelin</li>
+				<li>RPM Dashboards : Cycle de vie</li>
+			</ul>
+		</li>
+        <li>Conclusion</li>
       </ul>
     </article>
   </slide>
 
-  <slide hidden>
-    Hidden slides are left out of the presentation.
-  </slide>
-
   <slide>
-    <hgroup>
-      <h2>Code Slide (with Subtitle Placeholder)</h2>
-      <h3>Subtitle Placeholder</h3>
+	<hgroup>
+      <h2>Conclusion</h2>
     </hgroup>
-    <article>
-      <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
-      <pre class="prettyprint" data-lang="javascript">
-&lt;script type='text/javascript'&gt;
-  // Say hello world until the user starts questioning
-  // the meaningfulness of their existence.
-  function helloWorld(world) {
-    <b>for (var i = 42; --i &gt;= 0;) {
-      alert('Hello ' + String(world));
-    }</b>
-  }
-&lt;/script&gt;
-</pre>
-    </article>
+	<article>
+		<ul>
+			<li>Difficultés</li>
+			<ul>
+				<li>Contexte : taille de l'entreprise, organisation interne/externe.</li>
+			</ul>
+			<li>Satisfactions</li>
+			<li>Projets innovants</li>
+			<ul>
+				<li>Performance</li>
+				<li>Cloud</li>
+			</ul>
+		</ul>
+	</article>
   </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Code Slide (Smaller Font)</h2>
-    </hgroup>
-    <article class="smaller">
-      <pre class="prettyprint" data-lang="javascript">
-// Say hello world until the user starts questioning
-// the meaningfulness of their existence.
-function helloWorld(world) {
-  for (var i = 42; --i &gt;= 0;) {
-    alert('Hello ' + String(world));
-  }
-}
-</pre>
-<pre class="prettyprint" data-lang="css">
-&lt;style&gt;
-  p { color: pink }
-  b { color: blue }
-&lt;/style&gt;
-</pre>
-<pre class="prettyprint" data-lang="html">
-&lt;!DOCTYPE html>
-&lt;html>
-&lt;head>
-  &lt;title>My Awesome Page&lt;/title>
-&lt;/head>
-&lt;body>
-  &lt;p&gt;Hello world&lt;/p&gt;
-&lt;body>
-&lt;/html>
-</pre>
-    </article>
-  </slide>
-
-  <slide>
-    <aside class="note">
-      <section>
-        <ul>
-          <li>Point I wanted to make #1</li>
-          <li>Point I wanted to make #2</li>
-          <li>Point I wanted to make #3</li>
-          <li>Example <a href="#">link</a> in notes.</li>
-        </ul>
-        <p><b>Remember to say this tag line!</b></p>
-      </section>
-    </aside>
-    <hgroup>
-      <h2>Slide with Speaker Notes</h2>
-    </hgroup>
-    <article>
-      <p>Press 'p' to toggle speaker notes.</p>
-    </article>
-  </slide>
-
-  <slide>
-    <aside class="note">
-      <section>
-        <ul>
-          <li>See this amazing link: <a href="http://www.google.com">link</a>.</li>
-        </ul>
-        <p><b>Remember to say this tag line!</b></p>
-      </section>
-    </aside>
-    <hgroup>
-      <h2>Presenter Mode</h2>
-    </hgroup>
-    <article>
-      <p>Add <code><a href="?presentme=true" target="_self">?presentme=true</a></code> to the URL to enabled presenter mode.
-      This setting is sticky, meaning refreshing the page will persist presenter
-      mode.</p>
-      <p>Hit <code><a href="?presentme=false" target="_self">?presentme=false</a></code> to disable presenter mode.</p>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Slide with Image</h2>
-    </hgroup>
-    <article>
-      <img src="images/chart.png" class="reflect" alt="Description" title="Description">
-      <footer class="source">source: place source info here</footer>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Slide with Image (Centered horz/vert)</h2>
-    </hgroup>
-    <article class="flexbox vcenter">
-      <img src="images/barchart.png" alt="Description" title="Description">
-      <footer class="source">source: place source info here</footer>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Table Option A</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article>
-      <table>
-        <tr>
-          <th></th><th>Column 1</th><th>Column 2</th><th>Column 3</th><th>Column 4</th>
-        </tr>
-        <tr>
-          <td>Row 1</td><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 2</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 3</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 4</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 5</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-      </table>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Table Option A (Smaller Text)</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article class="smaller">
-      <table>
-        <tr>
-          <th></th><th>Column 1</th><th>Column 2</th><th>Column 3</th><th>Column 4</th>
-        </tr>
-        <tr>
-          <td>Row 1</td><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 2</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 3</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 4</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 5</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-      </table>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Table Option B</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article>
-      <table class="rows">
-        <tr>
-          <th>Header 1</th><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 2</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 3</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 4</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 5</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-      </table>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Slide Styles</h2>
-    </hgroup>
-    <article class="smaller">
-      <div class="columns-2">
-        <ul>
-          <li class="red">class="red"</li>
-          <li class="red2">class="red2"</li>
-          <li class="red3">class="red3"</li>
-          <li class="blue">class="blue"</li>
-          <li class="blue2">class="blue2"</li>
-          <li class="blue3">class="blue3"</li>
-          <li class="green">class="green"</li>
-          <li class="green2">class="green2"</li>
-        </ul>
-        <ul>
-          <li class="green3">class="green3"</li>
-          <li class="yellow">class="yellow"</li>
-          <li class="yellow2">class="yellow2"</li>
-          <li class="yellow3">class="yellow3"</li>
-          <li class="gray">class="gray"</li>
-          <li class="gray2">class="gray2"</li>
-          <li class="gray3">class="gray3"</li>
-          <li class="gray4">class="gray4"</li>
-        </ul>
-      </div>
-      <div class="centered" style="margin-top:2em">
-        I am centered text with a <button>Button</button> and <button disabled>Disabled</button> button.
-      </div>
-    </article>
-  </slide>
-
-  <slide class="segue dark nobackground">
-    <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
-    <hgroup class="auto-fadein">
-      <h2>Segue Slide</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-  </slide>
-
-  <slide class="fill nobackground" style="background-image: url(images/sky.jpg)">
-    <hgroup>
-      <h2 class="white">Full Image (with Optional Header)</h2>
-    </hgroup>
-    <footer class="source white">www.flickr.com/photos/25797459@N06/5438799763/</footer>
-  </slide>
-
-  <slide class="segue dark quote nobackground">
-    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
-    <article class="flexbox vleft auto-fadein">
-      <q>
-        This is an example of quote text.
-      </q>
-      <div class="author">
-        Name<br>
-        Company
-      </div>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Slide with Iframe</h2>
-    </hgroup>
-    <article>
-      <iframe data-src="http://www.google.com/doodle4google/history.html"></iframe>
-    </article>
-  </slide>
-
-  <slide>
-    <article>
-      <iframe data-src="http://www.google.com/doodle4google/history.html"></iframe>
-    </article>
-  </slide>
-
+  
   <slide class="thank-you-slide segue nobackground">
     <aside class="gdbar right"><img src="images/google_developers_icon_128.png"></aside>
     <article class="flexbox vleft auto-fadein">
@@ -395,7 +377,7 @@ function helloWorld(world) {
   <slide class="backdrop"></slide>
 
 </slides>
-
+  
 <script>
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);

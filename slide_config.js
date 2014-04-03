@@ -24,7 +24,7 @@ var SLIDE_CONFIG = {
     www: 'http://fr.linkedin.com/in/florianrotagnon/',
 	gplus: 'florian.rotagnon@gmail.com',
 	twitter: '@F10_R',
-	github: 'http://github.com/moz'
+	github: 'http://github.com/k-yak'
   }/*, {
     name: 'Second Name',
     company: 'Job Title, Google',
